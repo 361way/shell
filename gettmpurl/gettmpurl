@@ -1,0 +1,16 @@
+#!/bin/bash
+if [[ "$1" != "" ]]; then
+    filename=$(cat /proc/sys/kernel/random/uuid).$(basename $1)
+    echo -ne "\033[5mUploading file... Please waiting!\033[0m"
+    rsync -azq $1 rsynctmp@file.361way.com::ftptmp/${filename}
+    if [[ "$?" == "0" ]];then
+        echo -e "\r\033[KUpload Sucesses!"
+        echo "URL: http://file.361way.com:8888/ftptmp/${filename}";
+        echo -e "\033[31;5mNotice: This file will only keep for 24 hours!!!!\033[0m"
+    else
+        echo "Upload Faild! Please try again!"
+    fi
+else
+    echo "Please input filename!!"
+    exit 1
+fi

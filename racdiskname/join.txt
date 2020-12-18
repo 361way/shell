@@ -1,0 +1,4 @@
+ID=0B3A emcpowerfo emcpowerfp emcpowerfo
+ID=0B3E emcpowerfp emcpowerfo emcpowerfp
+ID=0B42 emcpowerfq emcpowerfq emcpowerfr
+ID=0B46 emcpowerfr emcpowerfr emcpowerfq

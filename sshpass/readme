@@ -1,0 +1,7 @@
+[主程序]
+main.sh  或 main2.sh
+--main.sh 主要在有相同用户和相同密码的情况下
+--main2.sh 主要主机没有相同用户和密码的情况下
+--mem.sh  需要在远程主机上执行的内容
+--hosts main.sh调用该列表中的主机，逐台执行
+--serverinfo.list main2.sh调用该列表中的主机、用户名、密码  

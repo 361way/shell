@@ -1,0 +1,7 @@
+###草草写的一个邮件和短信通知值班人员的通知代码
+* not.sh通过短信通知
+* mailto.sh 通过邮件通知，遇到周末会提前在周五进行通知
+
+可以通过crontab进行调用：
+10 08 * * *  sh /usr/local/notice/not.sh >/tmp/notice.txt 2>&1
+30 07 * * *  sh /usr/local/notice/mailto.sh >>/tmp/notice.txt 2>&1
